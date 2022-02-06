@@ -11,33 +11,10 @@ require("dotenv").config();
  */
 module.exports = {
   solidity: "0.8.0",
-  defaultNetwork: "hardhat",
+  defaultNetwork: "mainnet",
   networks: {
     mainnet: {
-      url: process.env.ALCHEMY_HTTP_URL_MAINNET,
-      accounts: {
-        mnemonic: process.env.RINKEBY_MNEMONIC
-      }
-    },
-    rinkeby: {
-      url: process.env.ALCHEMY_HTTP_URL_RINKEBY,
-      // accounts: [process.env.PRIVATE_KEY_ACC2]
-      accounts: {
-        mnemonic: process.env.RINKEBY_MNEMONIC
-      }
-    },
-    hardhat: {
-      forking: {
-        url: process.env.ALCHEMY_HTTP_URL_MAINNET
-      }
-    }
-  },
-  etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY
-  },
-  namedAccounts: {
-    deployer: {
-      default: 0
+      url: process.env.ALCHEMY_KEY,
     }
   }
 };
